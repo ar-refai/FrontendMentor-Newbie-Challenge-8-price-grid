@@ -1,2 +1,3 @@
-# FrontendMentor-Newbie-Challenge-8-price-grid
-Designing a price grid component as Practice Using HTML , CSS .
+# Frontend Mentor - Single price grid component
+
+![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)

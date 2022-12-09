@@ -1,0 +1,179 @@
+/* Coded By : Abdelrahman Elrefai Tawfik */
+/* 8th newbie Challenge @ frontend mentor website  */
+/* single-price-grid-component-master*/
+/* General Styling */
+:root {
+    /* primary */
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 59%, 51%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /* secondary */
+    --light-grey: hsl(204, 43%, 93%);
+    --gray-blue: hsl(218, 22%, 67%);
+}
+
+@font-face {
+    font-family: karla-light;
+    src: url(font/Karla-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: karla-bold;
+    src: url(font/static/Karla-Bold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .2s;
+}
+
+body {
+    background-color: var(--light-grey);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: karla-light, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* all grid styling */
+.price-grid {
+    display: grid;
+    grid-template-columns: 1/1;
+    /* box-shadow: 1px 1px 50px 0px #555; */
+}
+
+.price-grid h2 {
+    font-size: 20px;
+    font-family: karla-bold, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.price-head,
+.cost-sec,
+.why-sec {
+    padding: 30px;
+    width: 320px;
+}
+.cost-sec h2,
+.why-sec  h2 {
+    font-size: 18px;
+}
+/* head section styling */
+.price-head {
+    background-color: #ffffff;
+    color: #000000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* header */
+.price-head h2 {
+    color: var(--cyan);
+    
+}
+
+/* paragraphs */
+.price-head p:first-of-type {
+    color: var(--bright-yellow);
+    text-shadow: 1px 1px 2px 4px #444;
+    font-family: karla-bold, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+    opacity: .9;
+}
+
+.price-head p:nth-of-type(2) {
+    color: var(--gray-blue);
+}
+
+/* cost section styling */
+.cost-sec {
+    background-color: var(--cyan);
+}
+
+.cost-sec p:first-of-type {
+    color: var(--light-grey);
+}
+
+.cost-sec p span {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.cost-sec p:nth-of-type(2) {
+    color: var(--light-grey);
+    opacity: .9;
+
+}
+
+.cost-sec a {
+    display: block;
+    background-color: var(--bright-yellow);
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0 10px 0;
+    /* box-shadow: 6px 6px 10px #555; */
+    text-decoration: none;
+}
+
+/* why  section styling */
+.why-sec {
+    background-color: var(--light-cyan);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.why-sec h2 {
+    margin-bottom: 10px;
+}
+
+.why-sec p {
+    color: var(--light-grey);
+    opacity: .9;
+}
+
+
+/* desktop responsive page styling */
+@media screen and (min-width:1440px) {
+    body{
+        line-height: 1.4;
+    }
+    .price-grid {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        max-width: 600px;
+    }
+    .price-head,
+    .cost-sec,
+    .why-sec {
+        width: auto;
+    }
+    .seconed-half {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cost-sec {
+        width: 50%;
+        border-bottom-left-radius: 10px;
+    }
+    .cost-sec a {
+    margin-top: 30px;
+    }
+
+    .why-sec {
+        width: 50%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+
+    }
+}
